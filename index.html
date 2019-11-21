@@ -17,7 +17,7 @@
     <script type="text/javascript">
     //first glitch
     let bg = document.getElementById('container');
-    let count = 20;
+    let count = Math.random()*50;
     for (let i = 0; i < count; i++){
         let glitchBox = document.createElement('div');
         glitchBox.className = 'box';
@@ -28,17 +28,18 @@
         for (let i = 0; i < glitch.length; i++){
             glitch[i].style.left = Math.floor(Math.random()*100) + 'vw';
             glitch[i].style.top = Math.floor(Math.random()*100) + 'vh';
-            glitch[i].style.width = Math.floor(Math.random()*400) + 'px';
-            glitch[i].style.height = Math.floor(Math.random()*100) + 'px';
-            glitch[i].style.backgroundPosition = Math.floor(Math.random()*50) + 'px';
+            glitch[i].style.width = Math.floor(Math.random()*(Math.random()*200)) + 'px';
+            glitch[i].style.height = Math.floor(Math.random()*(Math.random()*20)) + 'px';
+            glitch[i].style.backgroundPosition = Math.floor(Math.random()*20) + 'px';
         }
-    },(Math.random()*900))
+    },(Math.random()*200))
     
     //second glitch
+    
     $(function glitchEffects(){
         $glitch = $('<div class="glitch"></div>')
-        var x = (Math.random() * 200);
-        var y = (Math.random() * 200);
+        var x = (Math.random() * 100);
+        var y = (Math.random() * 100);
 
         $glitch.css({
             'left' : x + 'px',
